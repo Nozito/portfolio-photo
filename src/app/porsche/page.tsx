@@ -1,41 +1,98 @@
-'use client'
+"use client";
 
-import '../globals.css';
-import React from 'react';
+import "../globals.css";
+import React from "react";
+import Image from "next/image";
+import Head from "next/head";
+import { Footer } from "../components/Footer";
+import { Navbar } from "../components/Navbar";
+import { BlurFade } from "../components/BlurFade";
+import "./style.css";
 
-export default function PorschePage() {
-  // Fonction pour faire défiler la page vers le haut lorsqu'on clique sur le bouton
+export default function Porsche() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div className="bg-black text-white">
+      <Navbar />
+
+      {/* Head */}
+      <Head>
+        <title>Porsche</title>
+        <meta name="description" content="Porsche Collection" />
+        <link rel="icon" href="/img/favicon.ico" />
+      </Head>
+
       {/* Hero Section */}
       <div className="flex justify-center items-center flex-col bg-black h-screen">
         <h1 className="mb-4 text-4xl font-bold">PORSCHE</h1>
       </div>
 
-      {/* Gallery Section */}
-      <div className="gallery-container">
-        <h2 className="text-center text-2xl mb-4">Centre Mont Blanc - 2023</h2>
-        <img src="img/GT3r.JPG" alt="Modèle GT3 Rouge" className="w-full mb-4" />
-
-        {/* Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <img src="img/911n.JPG" alt="Black 911 Carrera 4s" className="w-full" />
-          <img src="img/GT3RSpl.JPG" alt="GT3RS Tire behind a plant" className="w-full" />
+      {/* BlurFade Images Section */}
+      <BlurFade>
+        <div className="flex relative justify-center items-center mb-20">
+          <div id="cssportal-grid">
+            <div id="div1">
+              <Image
+                src="/img/GT3r.JPG"
+                alt="GT3 Red"
+                width={1000}
+                height={1000}
+              />
+            </div>
+            <div id="div2">
+              <Image
+                src="/img/GT3RSint.JPG"
+                alt="GT3RS Interior"
+                width={1000}
+                height={1000}
+              />
+            </div>
+            <div id="div3">
+              <Image
+                src="/img/Watchs.JPG"
+                alt="Watch Collection"
+                width={1000}
+                height={1000}
+              />
+            </div>
+            <div id="div4">
+              <Image
+                src="/img/911n.JPG"
+                alt="Black 911"
+                width={1000}
+                height={1000}
+              />
+            </div>
+            <div id="div5">
+              <Image
+                src="/img/953t.JPG"
+                alt="953 T"
+                width={1000}
+                height={1000}
+              />
+            </div>
+            <div id="div6">
+              <Image
+                src="/img/GT3RSpl.JPG"
+                alt="GT3RS Plant"
+                width={1000}
+                height={1000}
+              />
+            </div>
+            <div id="div7">
+              <Image
+                src="/img/bannerp.JPG"
+                alt="Logo Porsche Collection"
+                width={1000}
+                height={1000}
+              />
+            </div>
+          </div>
         </div>
-
-        {/* Additional Images */}
-        <img src="img/GT3RSint.JPG" alt="GT3RS Interior" className="w-full mb-4" />
-
-        {/* Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <img src="img/953t.JPG" alt="Tonneau 953 Dakar" className="w-full" />
-          <img src="img/Watchs.JPG" alt="Montre" className="w-full" />
-        </div>
-      </div>
+      </BlurFade>
 
       {/* Scroll to Top Button */}
       <button
@@ -45,6 +102,9 @@ export default function PorschePage() {
       >
         ↑
       </button>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
-};
+}

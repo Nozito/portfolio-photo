@@ -1,8 +1,14 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 
 export function Navbar() {
+    const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+
+    const togglePortfolio = () => {
+        setIsPortfolioOpen(!isPortfolioOpen);
+    };
+
     return (
         <nav className="bg-black">
             <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center">
@@ -14,16 +20,35 @@ export function Navbar() {
                 {/* Navigation Links */}
                 <div className="hidden md:flex space-x-8 text-white">
                     <a href="/" className="hover:text-gray-400">Accueil</a>
-                    <div className="relative group">
-                        <button className="hover:text-gray-400">Portfolio</button>
-                        <ul className="absolute hidden group-hover:block bg-black text-white mt-2 space-y-2 p-2 rounded-md shadow-lg w-40">
-                            <li><a href="concerts.html" className="block py-2 px-4 hover:bg-gray-700">Concerts</a></li>
-                            <li><a href="voitures.html" className="block py-2 px-4 hover:bg-gray-700">Voitures</a></li>
-                            <li><a href="portraits.html" className="block py-2 px-4 hover:bg-gray-700">Portraits</a></li>
-                        </ul>
+                    <div className="relative">
+                        <button
+                            className="hover:text-gray-400"
+                            onClick={togglePortfolio}
+                        >
+                            Portfolio
+                        </button>
+                        {isPortfolioOpen && (
+                            <ul className="absolute bg-black text-white mt-2 space-y-2 p-2 rounded-md shadow-lg w-40 z-10">
+                                <li>
+                                    <a href="concerts" className="block py-2 px-4 hover:bg-gray-700">
+                                        Concerts
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="voitures" className="block py-2 px-4 hover:bg-gray-700">
+                                        Voitures
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="portraits" className="block py-2 px-4 hover:bg-gray-700">
+                                        Portraits
+                                    </a>
+                                </li>
+                            </ul>
+                        )}
                     </div>
-                    <a href="a-propos.html" className="hover:text-gray-400">À propos</a>
-                    <a href="contact.html" className="hover:text-gray-400">Contact</a>
+                    <a href="about" className="hover:text-gray-400">À propos</a>
+                    <a href="contact" className="hover:text-gray-400">Contact</a>
                 </div>
 
                 {/* Social Media Icons */}

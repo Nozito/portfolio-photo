@@ -1,65 +1,78 @@
-'use client'
+'use client';
 
 import React from 'react';
+import { Footer } from '../components/Footer';
+import { Navbar } from '../components/Navbar';
 import '../globals.css';
 
 export default function About() {
   return (
-    <div>
+    <div className="bg-black text-white min-h-screen">
+      {/* Navbar */}
+      <Navbar />
+
       {/* Hero Section */}
       <title>À PROPOS</title>
-      <div className="d-flex justify-content-center align-items-center flex-column bg-black vh-100">
-        <h1 className="mb-4 display-4 fw-bold text-white">À PROPOS</h1>
+      <div className="flex justify-center items-center flex-col h-[50vh] bg-black">
+        <h1 className="text-5xl font-bold mb-4">À PROPOS</h1>
       </div>
 
       {/* Profile Section */}
-      <div className="profile-container container py-5">
-        <div className="row">
-          <div className="profile-header d-flex"></div>
-          <div className="profile-photo col-md-3">
+      <section className="container mx-auto py-12 px-6">
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          {/* Profile Photo */}
+          <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-8">
             <img
-              src="img/Noah.jpeg"
+              src="img/Noah.jpeg" // Vérifiez que l'image est bien placée dans le dossier public/img
               alt="Photo de profil"
-              className="img-fluid"
-              style={{ width: '200%', height: '235%', objectFit: 'cover' }}
+              className="rounded-lg shadow-lg w-72 h-[28rem] object-cover" // Augmentation de la hauteur
             />
           </div>
-          <div className="profile-text col-md-9">
-            <h1>Bonjour,</h1>
-            <p>Je suis Noah, photographe et vidéaste amateur, j'étudie à côté en BTS Informatique...</p>
-            <p>
-              Avant de prendre mon indépendance en photos et en vidéos, j’ai suivis pendant 3 ans en parallèle de mes
-              cours, une option cinéma-audiovisuel et j’ai pu réaliser avec des collègues 3 courts métrages et encore
-              d’autres que vous retrouverez dans mon portfolio.
+
+          {/* Profile Text */}
+          <div className="flex-1 text-lg leading-relaxed">
+            <h2 className="text-4xl font-semibold mb-4">Bonjour,</h2>
+            <p className="mb-4">
+              Je suis <strong>Noah</strong>, photographe et vidéaste amateur, j'étudie en parallèle en BTS Informatique...
             </p>
-            <p>
-              C’est depuis ma première participation à un festival musical avec du matériel prêté par mon ancien
-              établissement que j’ai commencé à prendre des photos seul. Et c’est après avoir vu les résultats de cet
-              évènement, et de mes 3 ans d’expériences, que j’ai décidé de prendre mon envol.
+            <p className="mb-4">
+              Avant de prendre mon indépendance en photos et en vidéos, j’ai suivi pendant 3 ans, en parallèle de mes
+              cours, une option cinéma-audiovisuel. J’ai pu réaliser, avec des collègues, 3 courts métrages, ainsi que
+              d’autres projets que vous retrouverez dans mon portfolio.
             </p>
-            <p>
-              À travers ce portfolio, vous pourrez suivre mon évolution depuis mes débuts que ce soit en photo ou en
+            <p className="mb-4">
+              À travers ce portfolio, vous pourrez suivre mon évolution depuis mes débuts, que ce soit en photo ou en
               cinématographie.
             </p>
-            <p>
-              Je n'ai pas de spécialisation particulière en matière de photographie. Je préfère explorer divers sujets et
-              rester polyvalent. Ainsi, vous découvrirez une variété de photos, toutes animées par ma passion. Ces images
-              reflètent mon intérêt pour la photographie, vous invitant à vous plonger dans l'univers des photos comme si
+            <p className="mb-4">
+              Je n'ai pas de spécialisation particulière en matière de photographie. Je préfère explorer divers sujets
+              pour rester polyvalent. Ainsi, vous découvrirez une variété de photos, toutes animées par ma passion. Ces
+              images reflètent mon intérêt pour la photographie, et vous invitent à plonger dans leur univers comme si
               vous en faisiez partie !
             </p>
-            <p>Merci de prendre le temps de découvrir mon travail. J'espère que ces images vous transporteront et vous inspireront autant qu'elles l'ont fait pour moi.</p>
-            <p>
+            <p className="mb-4">
+              Merci de prendre le temps de découvrir mon travail. J'espère que ces images vous transporteront et vous
+              inspireront autant qu'elles m'inspirent.
+            </p>
+            <p className="mb-4">
               Voici aussi mon{' '}
-              <a href="http://127.0.0.1:5501" target="_blank" rel="noopener noreferrer">
+              <a
+                href="http://127.0.0.1:5501"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 underline hover:text-blue-400"
+              >
                 Portfolio de Développeur
               </a>
+              .
             </p>
-            <p>
-              <strong>Noah</strong>
-            </p>
+            <p className="font-semibold">Noah</p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
-};
+}

@@ -1,19 +1,30 @@
 'use client'
 
-import React from 'react';
 import '../globals.css';
+import Head from 'next/head';
+import React from 'react';
+import { Footer } from '../components/Footer';
+import { Navbar } from '../components/Navbar';
 
 export default function Portraits() {
   return (
     <div>
-    <title>MES PORTRAITS</title>
+{/* Navbar */}
+<Navbar />
+      {/* Head Section */}
+      <Head>
+        <title>Mes portraits</title>
+        <meta name="description" content="Portraits" />
+        <link rel="icon" href="/img/favicon.ico" />
+      </Head>      
+      
       {/* Hero Section */}
       <div className="flex justify-center items-center flex-col bg-black h-screen">
         <h1 className="mb-4 text-4xl font-bold text-white">PORTRAITS EXT.</h1>
       </div>
 
       {/* Gallery Section */}
-      <section className="container mx-auto py-10">
+      {/* <section className="container mx-auto py-10">
         <h2 className="text-3xl font-semibold text-center text-white mb-8">JOSMAN</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <img
@@ -42,7 +53,10 @@ export default function Portraits() {
             className="w-full h-auto object-cover rounded-lg"
           />
         </div>
-      </section>
+      </section> */}
+        
+        {/* Footer */}
+        <Footer />
     </div>
   );
 };

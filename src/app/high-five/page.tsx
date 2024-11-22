@@ -1,7 +1,12 @@
-'use client'
+'use client';
 
 import '../globals.css';
+import './style.css';
+import Head from 'next/head';
 import React from 'react';
+import { Footer } from '../components/Footer';
+import { Navbar } from '../components/Navbar';
+import Image from 'next/image';
 
 export default function HighFive() {
   const scrollToTop = () => {
@@ -10,22 +15,68 @@ export default function HighFive() {
 
   return (
     <div className="bg-black text-white">
+      {/* Navbar */}
+      <Navbar />
+      {/* Head Section */}
+      <Head>
+        <title>High Five</title>
+        <meta name="description" content="High Five" />
+        <link rel="icon" href="/img/favicon.ico" />
+      </Head>
+
       {/* Hero Section */}
       <div className="flex justify-center items-center flex-col bg-black h-screen">
         <h1 className="mb-4 text-4xl font-bold">HIGH FIVE</h1>
       </div>
 
+
       {/* Gallery Section 1: Josman */}
-      <div className="gallery-container mb-8">
-        <h2 className="text-center text-2xl mb-4">JOSMAN</h2>
-        <img src="img/jos1.JPG" alt="Josman 1" className="w-full mb-4" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <img src="img/jos4.JPG" alt="Josman 4" className="w-full" />
-          <img src="img/jos3.JPG" alt="Josman 3" className="w-full" />
+      <div className="relative mx-auto">
+        <h2 className="text-6xl font-bold mb-2 justify-start ml-24">Josman</h2>
+        <div id="cssportal-grid">
+          <div id="div1">
+            <Image
+              src="/img/jos2.JPG"
+              alt="Le noir là"
+              width={1000}
+              height={1000}
+            />
+          </div>
+          <div id="div2">
+            <Image
+              src="/img/jos1.JPG"
+              alt="Le noir là"
+              width={1000}
+              height={1000}
+            />
+          </div>
+          <div id="div3">
+            <Image
+              src="/img/jos5.JPG"
+              alt="Toujours lui"
+              width={1000}
+              height={1000}
+            />
+          </div>
+          <div id="div4">
+            <Image
+              src="/img/jos4.JPG"
+              alt="Le noir là"
+              width={1000}
+              height={1000}
+            />
+          </div>
+          <div id="div5">
+            <Image
+              src="/img/jos3.JPG"
+              alt="Le noir là"
+              width={1000}
+              height={1000}
+            />
+          </div>
         </div>
-        <img src="img/jos2.JPG" alt="Josman 2" className="w-full mb-4" />
-        <img src="img/jos5.JPG" alt="Josman 5" className="w-full" />
       </div>
+
 
       {/* Gallery Section 2: 99 Rocky */}
       <div className="gallery-container mb-8">
@@ -66,6 +117,8 @@ export default function HighFive() {
       >
         ↑
       </button>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
