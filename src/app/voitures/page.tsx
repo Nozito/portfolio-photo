@@ -49,6 +49,30 @@ export default function Voitures() {
         </div>
       </div>
 
+      {/* Peugeot Section */}
+      <div
+        className="relative bg-cover bg-center h-screen"
+        style={{ backgroundImage: "url('/img/308JL-48.jpg')" }}
+        role="img"
+        aria-label="Image de Peugeot"
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 flex flex-col justify-center items-center text-center text-white h-full">
+          <h1 className="text-4xl font-bold mb-6">PEUGEOT</h1>
+          <button
+            className="px-6 py-3 bg-white text-black border-2 border-black rounded-lg hover:bg-black hover:text-white transition duration-300"
+            onClick={() => {
+              window.location.href = '/peugeot';
+            }}
+          >
+            Voir les Peugeot
+          </button>
+        </div>
+      </div>
+
       {/* Footer */}
       <Footer />
     </>
