@@ -44,13 +44,13 @@ export default function App() {
       <Section 
         title="PORTRAITS" 
         buttonText="Voir les portraits" 
-        image="img/jos1.JPG" 
+        image="img/DSC052772.JPG" 
         link="portraits" 
         reverse={false} 
         backgroundColor="bg-gray-400"
       />
 
-      {/* Section 4 */}
+      {/* Section 4 
       <Section 
         title="ANOTHER ONE" 
         buttonText="Voir les another one" 
@@ -58,7 +58,7 @@ export default function App() {
         link="another-one.html" 
         reverse={true} 
         backgroundColor="bg-white" 
-      />
+      />*/}
     </div>
 
     {/* Footer */}

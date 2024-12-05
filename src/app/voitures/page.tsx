@@ -6,75 +6,70 @@ import React from 'react';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 
-export default function Voitures() {
+const Voitures: React.FC = () => {
   return (
     <>
-    {/* Head Section */}
-    <Head>
-        <title>Les Voitures</title>
+      {/* Head Section */}
+      <Head>
+        <title>Gallerie Voitures</title>
         <meta name="description" content="Collection de voitures" />
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
-      
+
       {/* Navbar */}
       <Navbar />
 
+      {/* Header Section */}
+      <header className="flex items-center justify-center h-[35vh] bg-black">
+        <h1 className="text-5xl font-bold text-white">Voitures</h1>
+      </header>
 
-      {/* Hero Section */}
-      <div className="flex justify-center items-center flex-col bg-black min-h-screen text-center text-white">
-        <h1 className="mb-4 text-4xl font-bold uppercase">VOITURES</h1>
-      </div>
+      {/* Main Content */}
+      <main className="flex-grow px-6 py-12 bg-gray-100">
+        {/* Container for cars section */}
+        <div className="flex justify-center gap-8">
+          {/* Porsche Section */}
+          <div className="relative group w-full sm:max-w-md lg:max-w-2xl h-[30rem] overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="/img/bannerp.JPG"
+              alt="Porsche"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center">
+              <h2 className="text-2xl font-bold text-white mb-4">PORSCHE</h2>
+              <a
+                href="/porsche"
+                className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-900"
+              >
+                Voir les PORSCHE
+              </a>
+            </div>
+          </div>
 
-      {/* Porsche Section */}
-      <div
-        className="relative bg-cover bg-center h-screen"
-        style={{ backgroundImage: "url('/img/bannerp.JPG')" }}
-        role="img"
-        aria-label="Image de Porsche"
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        
-        {/* Content */}
-        <div className="relative z-10 flex flex-col justify-center items-center text-center text-white h-full">
-          <h1 className="text-4xl font-bold mb-6">PORSCHE</h1>
-          <button
-            className="px-6 py-3 bg-white text-black border-2 border-black rounded-lg hover:bg-black hover:text-white transition duration-300"
-            onClick={() => {
-              window.location.href = '/porsche';
-            }}
-          >
-            Voir les PORSCHE
-          </button>
+          {/* Peugeot Section */}
+          <div className="relative group w-full sm:max-w-md lg:max-w-2xl h-[30rem] overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="/img/308JL-48.jpg"
+              alt="Peugeot"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center">
+              <h2 className="text-2xl font-bold text-white mb-4">PEUGEOT</h2>
+              <a
+                href="/peugeot"
+                className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-900"
+              >
+                Voir les PEUGEOT
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Peugeot Section */}
-      <div
-        className="relative bg-cover bg-center h-screen"
-        style={{ backgroundImage: "url('/img/308JL-48.jpg')" }}
-        role="img"
-        aria-label="Image de Peugeot"
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        
-        {/* Content */}
-        <div className="relative z-10 flex flex-col justify-center items-center text-center text-white h-full">
-          <h1 className="text-4xl font-bold mb-6">PEUGEOT</h1>
-          <button
-            className="px-6 py-3 bg-white text-black border-2 border-black rounded-lg hover:bg-black hover:text-white transition duration-300"
-            onClick={() => {
-              window.location.href = '/peugeot';
-            }}
-          >
-            Voir les Peugeot
-          </button>
-        </div>
-      </div>
+      </main>
 
       {/* Footer */}
       <Footer />
     </>
   );
 };
+
+export default Voitures;
