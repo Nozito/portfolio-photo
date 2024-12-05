@@ -1,63 +1,65 @@
-'use client'
+import React from "react";
+import { Footer } from "../components/Footer";
+import { Navbar } from "../components/Navbar";
+import Head from "next/head";
 
-import '../globals.css';
-import Head from 'next/head';
-import React from 'react';
-import { Footer } from '../components/Footer';
-import { Navbar } from '../components/Navbar';
-
-export default function Portraits() {
+const PortraitCards: React.FC = () => {
   return (
-    <div>
-{/* Navbar */}
-<Navbar />
+    <div className="flex flex-col min-h-screen">
+      {/* Navbar */}
+      <Navbar />
+
       {/* Head Section */}
       <Head>
         <title>Mes portraits</title>
         <meta name="description" content="Portraits" />
         <link rel="icon" href="/img/favicon.ico" />
-      </Head>      
-      
+      </Head>
+
       {/* Hero Section */}
       <div className="flex justify-center items-center flex-col bg-black h-screen">
-        <h1 className="mb-4 text-4xl font-bold text-white">PORTRAITS EXT.</h1>
+        <h1 className="mb-4 text-4xl font-bold text-white">PORTRAITS</h1>
       </div>
 
-      {/* Gallery Section */}
-      {/* <section className="container mx-auto py-10">
-        <h2 className="text-3xl font-semibold text-center text-white mb-8">JOSMAN</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <img
-            src="path_to_your_image1.jpg"
-            alt="Concert Image 1"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-          <img
-            src="path_to_your_image2.jpg"
-            alt="Concert Image 2"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-          <img
-            src="path_to_your_image3.jpg"
-            alt="Concert Image 3"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-          <img
-            src="path_to_your_image4.jpg"
-            alt="Concert Image 4"
-            className="w-full h-auto object-cover rounded-lg"
-          />
-          <img
-            src="path_to_your_image5.jpg"
-            alt="Concert Image 5"
-            className="w-full h-auto object-cover rounded-lg"
-          />
+      {/* Main Content */}
+      <main className="flex-grow">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 p-6">
+          {/* Card: Portraits Extérieurs */}
+          <div className="relative group w-full max-w-2xl h-[30rem] overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="/img/Eliott2.jpg"
+              alt="Portraits Extérieurs"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center">
+              <h2 className="text-2xl font-bold text-white mb-4">Portraits Extérieurs</h2>
+              <a href="portraits-ext" className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-900">
+                Voir plus
+              </a>
+            </div>
+          </div>
+
+          {/* Card: Portraits Studio */}
+          <div className="relative group w-full max-w-2xl h-[30rem] overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="/img/DSC05277.jpg"
+              alt="Portraits Studio"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center">
+              <h2 className="text-2xl font-bold text-white mb-4">Portraits Studio</h2>
+              <a href="portraits-int" className="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-900">
+                Voir plus
+              </a>
+            </div>
+          </div>
         </div>
-      </section> */}
-        
-        {/* Footer */}
-        <Footer />
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
 
+export default PortraitCards;
