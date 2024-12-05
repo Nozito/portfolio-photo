@@ -68,7 +68,7 @@ export default function Peugeot() {
             </div>
             <div id="div5">
               <Image
-                src="/img/308JL-07.JPG"
+                src="/img/308JL-19.JPG"
                 alt="Peugeot 308"
                 width={1000}
                 height={1000}
