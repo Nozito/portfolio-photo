@@ -59,7 +59,6 @@ export default function App() {
         reverse={true} 
         backgroundColor="bg-white" 
     />
-
     {/* Footer */}
     <Footer />
 
