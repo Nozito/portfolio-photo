@@ -44,6 +44,11 @@ export function Navbar() {
                                         Portraits
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="voyages" className="block py-2 px-4 hover:bg-gray-700">
+                                        Voyages
+                                    </a>
+                                </li>
                             </ul>
                         )}
                     </div>
