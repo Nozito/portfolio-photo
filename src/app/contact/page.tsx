@@ -27,7 +27,7 @@ export default function Contact() {
       {/* Contact Section */}
       <section className="container py-10 mx-auto flex-grow">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-semibold text-white">Let's Talk!</h2>
+          <h2 className="text-3xl font-semibold text-white">Let&apos;s Talk!</h2>
           <p className="text-lg text-white">
             Remplissez dès maintenant le formulaire ci-dessous pour me contacter.
           </p>

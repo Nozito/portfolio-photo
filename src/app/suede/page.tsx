@@ -5,6 +5,7 @@ import React from "react";
 import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
+import Image from "next/image";
 
 export default function Suede() {
   const scrollToTop = () => {
@@ -41,7 +42,7 @@ export default function Suede() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-6">
         {data.map((item) => (
           <div key={item.id} className="overflow-hidden rounded-lg">
-            <img
+            <Image
               src={item.image}
               alt={`Suede ${item.id}`}
               style={{ height: `${item.height}px`, width: "100%", objectFit: "cover" }}

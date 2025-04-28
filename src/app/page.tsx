@@ -11,9 +11,9 @@ export default function App() {
     <Navbar />
 
     {/* Hero Section */}
-    <title>Noah's Portfolio</title>
+    <title>Noah&apos;s Portfolio</title>
     <div className="flex justify-center items-center flex-col bg-black h-screen text-center text-white">
-      <h1 className="mb-4 text-4xl font-bold uppercase">let's work together</h1>
+      <h1 className="mb-4 text-4xl font-bold uppercase">let&apos;s work together</h1>
       <p className="text-lg mb-4">Explorons des idées créatives et audacieuses.</p>
       <a href="/contact" className="px-6 py-3 bg-white text-black rounded-lg hover:bg-gray-200">En savoir plus</a>
     </div>

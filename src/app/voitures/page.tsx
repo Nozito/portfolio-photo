@@ -5,6 +5,7 @@ import Head from 'next/head';
 import React from 'react';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
+import Image from 'next/image';
 
 const Voitures: React.FC = () => {
   return (
@@ -30,7 +31,7 @@ const Voitures: React.FC = () => {
         <div className="flex justify-center gap-8">
           {/* Porsche Section */}
           <div className="relative group w-full sm:max-w-md lg:max-w-2xl h-[30rem] overflow-hidden rounded-lg shadow-lg">
-            <img
+            <Image
               src="/img/bannerp.JPG"
               alt="Porsche"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -48,7 +49,7 @@ const Voitures: React.FC = () => {
 
           {/* Peugeot Section */}
           <div className="relative group w-full sm:max-w-md lg:max-w-2xl h-[30rem] overflow-hidden rounded-lg shadow-lg">
-            <img
+            <Image
               src="/img/308JL-48.jpg"
               alt="Peugeot"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export function Section(props: { 
   title: string; 
@@ -43,7 +44,7 @@ export function Section(props: {
 
       {/* Image Section */}
       <div className="flex-1 flex justify-center">
-        <img 
+        <Image 
           src={image} 
           alt={title} 
           className="w-[85%] h-auto object-cover rounded-lg mt-4" /* Adjusted width for better scaling */

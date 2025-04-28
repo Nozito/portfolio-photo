@@ -4,6 +4,7 @@ import React from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import Head from "next/head";
+import Image from "next/image";
 
 const Portraits: React.FC = () => {
   const portraits = [
@@ -68,7 +69,7 @@ const Portraits: React.FC = () => {
                   className="relative group overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transform transition-all duration-300"
                 >
                   {/* Image */}
-                  <img
+                  <Image
                     src={photo}
                     alt={`Portrait de ${person.name} ${idx + 1}`}
                     className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-110"
