@@ -2,11 +2,10 @@
 
 import "../globals.css";
 import React from "react";
-import Image from "next/image";
 import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
-import { Carousel } from "../components/Carousel"; // Import Carousel here
+import { Carousel } from "../components/Carousel";
 
 export default function Voyages() {
   const scrollToTop = () => {
@@ -16,15 +15,23 @@ export default function Voyages() {
   // Example slide data to pass to the Carousel component
   const slides = [
     {
-      title: "Paris, France",
-      button: "Discover",
-      src: "/img/paris-1.jpg",
-    },
-    {
-      title: "Stockholm, Suède",
+      title: "Suède",
       button: "Explore",
       src: "/img/Stockholm-84.jpg",
+      href: "/suede",
     },
+    {
+      title: "Danemark",
+      button: "Bientôt..",
+      src: "/img/Copenhague-1.jpg",
+      //href: "/danemark",
+    },
+    {
+      title: "Paris",
+      button: "Bientôt..",
+      src: "/img/Paris-1.jpg",
+      //href: "/paris",
+    }
   ];
 
   return (
