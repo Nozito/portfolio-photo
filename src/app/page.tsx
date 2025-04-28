@@ -50,20 +50,20 @@ export default function App() {
         backgroundColor="bg-gray-400"
       />
 
-      {/* Section 4 
+      {/* Section 4 */}
       <Section 
-        title="ANOTHER ONE" 
-        buttonText="Voir les another one" 
-        image="img/jos1.JPG" 
-        link="another-one.html" 
+        title="Voyages" 
+        buttonText="Voir les voyages" 
+        image="img/Malmo-1.jpg" 
+        link="voyages" 
         reverse={true} 
         backgroundColor="bg-white" 
-      />*/}
-    </div>
+    />
 
     {/* Footer */}
     <Footer />
-  </>
-);
-}
 
+    </div>
+  </>
+  );
+}
