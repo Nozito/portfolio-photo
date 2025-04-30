@@ -24,7 +24,7 @@ export default function App() {
       <Section 
         title="VOITURES" 
         buttonText="Voir les voitures" 
-        image="img/voitures.png" 
+        image="/img/voitures.png" 
         link="voitures" 
         reverse={false} 
         backgroundColor="bg-gray-400"
@@ -34,7 +34,7 @@ export default function App() {
       <Section 
         title="CONCERTS" 
         buttonText="Voir les concerts" 
-        image="img/jos1.JPG" 
+        image="/img/jos1.JPG" 
         link="concerts" 
         reverse={true} 
         backgroundColor="bg-white" 
@@ -44,7 +44,7 @@ export default function App() {
       <Section 
         title="PORTRAITS" 
         buttonText="Voir les portraits" 
-        image="img/DSC052772.JPG" 
+        image="/img/DSC052772.JPG" 
         link="portraits" 
         reverse={false} 
         backgroundColor="bg-gray-400"
@@ -54,7 +54,7 @@ export default function App() {
       <Section 
         title="Voyages" 
         buttonText="Voir les voyages" 
-        image="img/Malmo-1.jpg" 
+        image="/img/Malmo-1.jpg" 
         link="voyages" 
         reverse={true} 
         backgroundColor="bg-white" 

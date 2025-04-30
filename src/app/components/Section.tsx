@@ -47,7 +47,9 @@ export function Section(props: {
         <Image 
           src={image} 
           alt={title} 
-          className="w-[85%] h-auto object-cover rounded-lg mt-4" /* Adjusted width for better scaling */
+          className="w-[85%] h-auto object-cover rounded-lg mt-4"
+          width={1000}
+          height={1000}
         />
       </div>
     </div>
