@@ -37,26 +37,26 @@ export default function About() {
         <div className="flex-1 text-lg leading-relaxed">
           <h2 className="text-4xl font-semibold mb-4">Bonjour,</h2>
           <p className="mb-4">
-            Je suis <strong>Noah</strong>, photographe et vidéaste amateur, j'étudie en parallèle en BTS Informatique...
+            Je suis <strong>Noah</strong>, photographe et vidéaste amateur, j&apos;étudie en parallèle en BTS Informatique...
           </p>
           <p className="mb-4">
-            Avant de prendre mon indépendance en photos et en vidéos, j’ai suivi pendant 3 ans, en parallèle de mes
-            cours, une option cinéma-audiovisuel. J’ai pu réaliser, avec des collègues, 3 courts métrages, ainsi que
-            d’autres projets que vous retrouverez dans mon portfolio.
+            Avant de prendre mon indépendance en photos et en vidéos, j&apos;ai suivi pendant 3 ans, en parallèle de mes
+            cours, une option cinéma-audiovisuel. J&apos;ai pu réaliser, avec des collègues, 3 courts métrages, ainsi que
+            d&apos;autres projets que vous retrouverez dans mon portfolio.
           </p>
           <p className="mb-4">
             À travers ce portfolio, vous pourrez suivre mon évolution depuis mes débuts, que ce soit en photo ou en
             cinématographie.
           </p>
           <p className="mb-4">
-            Je n'ai pas de spécialisation particulière en matière de photographie. Je préfère explorer divers sujets
+            Je n&apos;ai pas de spécialisation particulière en matière de photographie. Je préfère explorer divers sujets
             pour rester polyvalent. Ainsi, vous découvrirez une variété de photos, toutes animées par ma passion. Ces
             images reflètent mon intérêt pour la photographie, et vous invitent à plonger dans leur univers comme si
             vous en faisiez partie !
           </p>
           <p className="mb-4">
-            Merci de prendre le temps de découvrir mon travail. J'espère que ces images vous transporteront et vous
-            inspireront autant qu'elles m'inspirent.
+            Merci de prendre le temps de découvrir mon travail. J&apos;espère que ces images vous transporteront et vous
+            inspireront autant qu&apos;elles m&apos;inspirent.
           </p>
           <p className="mb-4">
             Voici aussi mon{' '}
