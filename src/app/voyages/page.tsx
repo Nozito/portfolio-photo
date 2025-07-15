@@ -12,7 +12,6 @@ export default function Voyages() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Example slide data to pass to the Carousel component
   const slides = [
     {
       title: "Suède",

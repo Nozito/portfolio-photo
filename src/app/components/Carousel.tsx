@@ -1,6 +1,8 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 interface SlideData {
   title: string;
@@ -59,11 +61,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     yRef.current = 0;
   };
 
-  const imageLoaded = (event: React.SyntheticEvent<HTMLImageElement>) => {
-    event.currentTarget.style.opacity = "1";
-  };
-
-  const { src, button, title } = slide;
+  const { src, button, title, href } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -91,16 +89,15 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : "none",
           }}
         >
-          <img
+          <Image
             className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
             alt={title}
             src={src}
-            onLoad={imageLoaded}
-            loading="eager"
-            decoding="sync"
+            fill
+            priority
           />
           {current === index && (
             <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
@@ -116,12 +113,12 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             {title}
           </h2>
           <div className="flex justify-center">
-            <a
-              href={slide.href}
+            <Link
+              href={href || "#"}
               className="mt-6 px-4 py-2 w-fit mx-auto sm:text-sm text-black bg-white h-12 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
             >
               {button}
-            </a>
+            </Link>
           </div>
         </article>
       </li>

@@ -5,6 +5,7 @@ import Head from 'next/head';
 import React from 'react';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
+import BlurText from '../components/BlurText';
 
 export default function Contact() {
   return (
@@ -21,7 +22,14 @@ export default function Contact() {
 
       {/* Hero Section */}
       <div className="flex justify-center items-center flex-col bg-black h-screen">
-        <h1 className="mb-4 text-4xl font-bold text-white">CONTACT</h1>
+        <h1 className="mb-4 text-4xl font-bold text-white">
+          <BlurText
+            text="ME CONTACTER"
+            delay={150}
+            animateBy="words"
+            direction="top"
+          />
+        </h1>
       </div>
 
       {/* Contact Section */}

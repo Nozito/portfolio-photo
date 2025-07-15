@@ -17,7 +17,7 @@ export function Navbar() {
             <div className="container mx-auto px-4 py-2 hidden md:flex flex-row justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="mb-4 md:mb-0">
-                    <Image src="/img/Nb.png" alt="Noah_pfp" className="h-24 w-24" width={96} height={96} />
+                    <Image src="/img/Nb.png" alt="Noah_pfp" className="h-24 w-24" width={96} height={96} priority />
                 </Link>
 
                 {/* Navigation Links */}

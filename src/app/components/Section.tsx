@@ -13,15 +13,12 @@ export function Section(props: {
 }) {
   const { title, buttonText, image, link, reverse, backgroundColor } = props;
 
-  // Determine if the background is light
   const isLightBackground = backgroundColor?.includes('white');
 
-  // Button styles based on the background color
   const buttonStyles = isLightBackground
     ? 'bg-white text-black border-black hover:bg-black hover:text-white hover:border-white'
     : 'bg-black text-white border-black hover:bg-white hover:text-black hover:border-white';
 
-  // Title color based on the background
   const titleStyles = isLightBackground ? 'text-black' : 'text-white';
 
   return (

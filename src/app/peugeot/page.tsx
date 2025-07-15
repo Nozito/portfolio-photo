@@ -40,6 +40,7 @@ export default function Peugeot() {
                 alt="Peugeot 308"
                 width={1000}
                 height={1000}
+                priority
               />
             </div>
             <div id="div2">
@@ -48,6 +49,7 @@ export default function Peugeot() {
                 alt="Peugeot 308"
                 width={1000}
                 height={1000}
+                priority
               />
             </div>
             <div id="div3">
@@ -56,6 +58,7 @@ export default function Peugeot() {
                 alt="Peugeot 308"
                 width={1000}
                 height={1000}
+                priority
               />
             </div>
             <div id="div4">
@@ -64,6 +67,7 @@ export default function Peugeot() {
                 alt="Peugeot 308"
                 width={1000}
                 height={1000}
+                priority
               />
             </div>
             <div id="div5">
@@ -72,6 +76,7 @@ export default function Peugeot() {
                 alt="Peugeot 308"
                 width={1000}
                 height={1000}
+                priority
               />
             </div>
             <div id="div6">
@@ -80,6 +85,7 @@ export default function Peugeot() {
                 alt="Peugeot 308"
                 width={1000}
                 height={1000}
+                priority
               />
             </div>
             <div id="div7">
@@ -88,6 +94,7 @@ export default function Peugeot() {
                 alt="Peugeot 308"
                 width={1000}
                 height={1000}
+                priority
               />
             </div>
           </div>
