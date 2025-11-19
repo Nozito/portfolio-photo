@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function Navbar() {
-  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (

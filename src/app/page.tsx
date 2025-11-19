@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
@@ -9,7 +9,7 @@ import Image from "next/image";
 import "./globals.css";
 
 
-const NavbarAny: any = Navbar;
+const NavbarAny = Navbar as React.ComponentType<{ dark: boolean; setDark: React.Dispatch<React.SetStateAction<boolean>> }>;
 
 export default function HomePage() {
   const [dark, setDark] = useState(false);
@@ -82,7 +82,15 @@ export default function HomePage() {
   );
 }
 
-function HomeSection({ title, text, image, link, reverse }: any) {
+interface HomeSectionProps {
+  title: string;
+  text: string;
+  image: string;
+  link: string;
+  reverse?: boolean;
+}
+
+function HomeSection({ title, text, image, link, reverse }: HomeSectionProps) {
   return (
     <div
       className={`flex flex-col md:flex-row items-center gap-10 relative ${

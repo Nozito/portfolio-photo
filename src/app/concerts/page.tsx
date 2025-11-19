@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Concerts() {
@@ -35,7 +36,7 @@ export default function Concerts() {
         <div className="relative z-10 flex flex-col justify-center items-center text-center px-4 ">
           <h1 className="text-5xl sm:text-6xl font-extrabold mb-4 text-white drop-shadow-lg">CONCERTS</h1>
           <p className="text-lg sm:text-xl text-gray-200 mb-6 max-w-xl">
-            Découvrez mes moments capturés lors des concerts et plongez dans l'ambiance des shows.
+            Découvrez mes moments capturés lors des concerts et plongez dans l&nbsp;ambiance des shows.
           </p>
           {/* Scroll down indicator and link to concerts grid */}
           <div className="animate-bounce mt-4">
@@ -64,7 +65,7 @@ export default function Concerts() {
               className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 hover:shadow-2xl hover:shadow-purple-600/50 transition-transform duration-300"
             >
               <div className="relative h-64 w-full rounded-2xl overflow-hidden">
-                <img
+                <Image
                   src={concert.image}
                   alt={concert.title}
                   className="h-full w-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-110"

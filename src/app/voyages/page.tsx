@@ -6,7 +6,6 @@ import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { Carousel } from "../components/Carousel";
-import BlurText from "../components/BlurText";
 
 export default function Voyages() {
   const scrollToTop = () => {
@@ -24,13 +23,11 @@ export default function Voyages() {
       title: "Danemark",
       button: "Bientôt..",
       src: "/img/Copenhague-1.jpg",
-      //href: "/danemark",
     },
     {
       title: "Paris",
       button: "Bientôt..",
       src: "/img/Paris-1.jpg",
-      //href: "/paris",
     }
   ];
 

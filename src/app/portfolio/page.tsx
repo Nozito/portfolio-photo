@@ -1,9 +1,8 @@
-
-
 'use client';
 
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 import Link from 'next/link';
@@ -83,7 +82,7 @@ export default function Portfolio() {
               className="relative group rounded-2xl overflow-hidden shadow-lg cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform duration-300"
             >
               <div className="relative h-64 w-full rounded-2xl overflow-hidden">
-                <img
+                <Image
                   src={cat.image}
                   alt={cat.title}
                   className="h-full w-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-110"
