@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica World", sans-serif;
 }
 
 @layer base {
@@ -68,5 +68,12 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    height: 350px !important;
+    min-height: 350px !important;
   }
 }

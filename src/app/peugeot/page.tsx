@@ -1,13 +1,16 @@
 "use client";
+"use client";
 
-import "../globals.css";
+import "./style.css";
+
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { BlurFade } from "../components/BlurFade";
-import "./style.css";
+import BlurText from "../components/BlurText";
+
 
 export default function Peugeot() {
   const scrollToTop = () => {
@@ -21,13 +24,21 @@ export default function Peugeot() {
       {/* Head */}
       <Head>
         <title>Peugeot</title>
-        <meta name="description" content="Porsche Collection" />
+        <meta name="description" content="Peugeot Collection" />
         <link rel="icon" href="/img/favicon.ico" />
       </Head>
 
       {/* Hero Section */}
-      <div className="flex justify-center items-center flex-col bg-black h-screen">
-        <h1 className="mb-4 text-4xl font-bold">PEUGEOT</h1>
+      {/* Hero Section */}
+      <div className="flex justify-center items-center flex-col bg-black pt-20 pb-8 md:pt-32 md:pb-12">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-center">
+          <BlurText
+            text="Peugeot"
+            delay={150}
+            animateBy="words"
+            direction="top"
+          />
+        </h1>
       </div>
 
       {/* BlurFade Images Section */}

@@ -6,6 +6,7 @@ import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { Carousel } from "../components/Carousel";
+import BlurText from "../components/BlurText";
 
 export default function Voyages() {
   const scrollToTop = () => {
@@ -45,8 +46,7 @@ export default function Voyages() {
       </Head>
 
       {/* Hero Section */}
-      <div className="flex justify-center items-center flex-col bg-black h-screen">
-        <h1 className="mb-4 text-4xl font-bold">AROUND THE WORLD</h1>
+      <div className="flex justify-center items-center flex-col bg-black pt-20 pb-8 md:pt-32 md:pb-12">
       </div>
 
       {/* Carousel Section */}
